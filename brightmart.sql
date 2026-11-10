@@ -200,4 +200,45 @@ FROM orders
 INNER JOIN customers
     ON orders.customer_id = customers.customer_id;
  
+SELECT product_id, product_name, price
+FROM products
+WHERE product_name = 'USB-C Cable';
 
+UPDATE products
+SET price = 109.50
+WHERE product_name = 'USB-C Cable';
+
+SELECT product_name, price
+FROM products
+WHERE product_name = 'USB-C Cable';
+
+UPDATE products
+SET
+    stock_quantity = 45,
+    description = 'One metre USB-C charging and data cable'
+WHERE product_name = 'USB-C Cable';
+
+ALTER TABLE customers
+ADD COLUMN city VARCHAR(80);
+
+ALTER TABLE customers
+RENAME COLUMN phone TO phone_number;
+
+SELECT customer_id, first_name, last_name, email
+FROM customers
+WHERE email = 'lona@example.com';
+
+DELETE FROM customers
+WHERE email = 'lona@example.com';
+
+UPDATE products 
+SET price = 105.99
+WHERE product_name = 'USB-B Cable';
+
+UPDATE customers
+SET city = 'Cape Town'
+WHERE first_name = 'Makwa';
+
+SELECT first_name,last_name
+FROM customers
+WHERE city = 'Cape Town';
