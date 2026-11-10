@@ -46,3 +46,48 @@ CREATE TABLE order_items (
     CONSTRAINT uq_order_product
         UNIQUE (order_id, product_id)
 );
+
+INSERT INTO customers (first_name, last_name, email, phone)
+VALUES
+    ('Lona', 'Hans', 'lona@example.com', '0764849123'),
+    ('Daniel', 'Mokoena', 'daniel@example.com', '0764849133'),
+	('Siya', 'Ngobeni', 'siya03@example.com', '0764849132'),
+	('Makwa', 'Kraft', 'makwa@example.com', '0764849144'),
+	('Ntyiso', 'Khumalo', 'ntyiso@example.com', '0764848921'),
+	('Sunflower', 'Seed', 'flower12@example.com', '0764849166');
+	
+SELECT * FROM customers;
+
+INSERT INTO products (product_name, description, price, stock_quantity)
+VALUES
+    ('Wireless Mouse', 'Wireless computer mouse', 249.99, 30),
+    ('Mechanical Keyboard', 'USB mechanical keyboard', 899.00, 15),
+    ('USB-C Cable', 'One metre USB-C cable', 99.50, 50),
+	('USB-C Cable', 'two metre USB-C cable', 149.50, 50),
+	('USB-B Cable', 'One metre USB-C cable', 99.50, 50),
+	('Monitor', 'Dell version 5', 999.50, 50);
+
+SELECT * FROM products;
+
+INSERT INTO orders (customer_id, status)
+VALUES
+    (1, 'PAID'),
+    (2, 'PENDING'),
+	(3, 'SHIPPED'),
+	(4, 'PAID'),
+	(5, 'PENDING'),
+	(6, 'CANCELLED');
+
+SELECT order_id, customer_id, status FROM orders;
+SELECT product_id, product_name, price FROM products;
+
+INSERT INTO order_items (order_id, product_id, quantity, unit_price)
+VALUES
+    (4, 1, 2, 249.99),
+    (5, 3, 1, 99.50),
+    (6, 2, 1, 899.00);
+
+SELECT * FROM customers;
+SELECT * FROM products;
+SELECT * FROM orders;
+SELECT * FROM order_items;
