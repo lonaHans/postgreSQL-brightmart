@@ -1,0 +1,16 @@
+1. A primary key is a column (or combination of columns) that uniquely identifies each record in a table.
+2. A foreign key is a column in one table that refers to the primary key in another table. It creates a relationship between the two tables.
+3. We use JOINs to combine data from two or more tables using a related column.
+4. WHERE filters individual rows before grouping.
+   HAVING filters groups after using GROUP BY.
+5. UPDATE changes existing data in a table.
+   ALTER TABLE changes the structure of a table, such as adding or removing columns.
+6. You should be careful because DELETE removes records from a table. If you forget the WHERE condition, all records in the table may be deleted.
+7. DELETE removes records from a table but keeps the table structure.
+   DROP TABLE removes the entire table, including its structure and data.
+8. ORDER BY sorts the results, while LIMIT restricts how many records are displayed.
+9. SUM() is used when you want to calculate the total of values.
+   AVG() is used when you want to calculate the average of values.
+10. Constraints are important because they help maintain data accuracy, consistency and integrity.
+
+
